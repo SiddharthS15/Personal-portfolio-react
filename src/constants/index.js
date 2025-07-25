@@ -15,9 +15,9 @@ import {
   git,
   xavier,
   oist,
-  nextinnovation,
-  cognizant,
-  internshala,
+  aicte,
+  cp,
+  canspirit,
   linkedin,
   hackerrank,
   karate,
@@ -86,7 +86,7 @@ const education = [
     date: "2022-2026",
     points: [
       "Courses undertaken: Data Structures and Algorithms, Operating Systems, Database Management Systems, Object Oriented Programming, Image Processing & Computer Vision, Computer Network, Compiler Design, Cloud Computing, Design and Analysis of Algorithm, Artificial Intelligence, Machine Learning and Deep Learning, Data Science, Internet of Things.",
-      "Percentage: 8.84/10",
+      "CGPA: 8.84/10",
     ],
   },
   {
@@ -162,53 +162,43 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Programmer Analyst Trainee",
-    company_name: "Cognizant Technology Solutions",
-    icon: cognizant,
+    title: "GSSO Digital Intern",
+    company_name: "Colgate Palmolive",
+    icon: cp,
     iconBg: "#fff",
-    date: "May 2024 - present",
+    date: "July 2025 - present",
     points: [
-      "Achieved ServiceNow Certified Risk and Compliance certification.",
-      "Specialized in GRC/IRM (Governance, Risk, and Compliance/Integrated Risk Management) within ServiceNow, gaining hands-on experience in this product line."
+      "I work on integrating and managing SAP Customer Data Cloud (Gigya) for secure user identity across global platforms.",
+      "I configure screen-sets, consent flows, and social logins to ensure compliance and seamless user experience.",
+      "I collaborate with backend and frontend teams to implement Gigya APIs and troubleshoot session issues.",
+      "I also contribute to documentation and support digital transformation efforts within the team."
     ],
   },
   {
     title: "Intern",
-    company_name: "Cognizant Technology Solutions",
-    icon: cognizant,
+    company_name: "Canspirit Artificial Intelligence",
+    icon: canspirit,
     iconBg: "#fff",
-    date: "Dec 2023 - Apr 2024",
+    date: "Sep 2024 - Mar 2025",
     points: [
-      "Internship at Cognizant focused on ServiceNow domain.",
-      "Achieved ServiceNow Certified System Administrator and ServiceNow Certified Application Developer certifications.",
-      "Specialized in GRC/IRM (Governance, Risk, and Compliance/Integrated Risk Management) within ServiceNow, gaining hands-on experience in this product line."
-    ],
+      "Collaborated with a team of 5 to develop a web-based QR code generation and management platform.",
+      "Designed and implemented backend architecture using Python and Django, with structured database scripting for efficient data handling.",
+      "Contributed to UI/UX design by creating intuitive, responsive interfaces using HTML, CSS, and JavaScript, ensuring a seamless user experience."
+    ]
   },
   {
-    title: "Web Development Intern",
-    company_name: "Next Innovation Technology",
-    icon: nextinnovation,
+    title: "Data Analytics Virtual Intern",
+    company_name: "AICTE",
+    icon: aicte,
     iconBg: "#fff",
-    date: "Jun 2023 - Aug 2023",
+    date: "Oct 2024 - Nov 2024",
     points: [
-      "Developed a web application using HTML, CSS, Javascript, PHP, and Bootstrap for the client.",
-      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website. ",
-      "Designed various different websites with responsive designs and dynamic content. ",
+      "Gained hands-on experience in real-world data analysis through structured modules and case studies.",
+      "Performed data cleaning, transformation, and statistical analysis using Pandas and NumPy on large datasets.",
+      "Visualized key insights and trends using Matplotlib and Seaborn to support data-driven decision making.",
     ],
-  },
-  {
-    title: "Campus Ambassador Intern: WFH",
-    company_name: "Internshala",
-    icon: internshala,
-    iconBg: "#1294C8",
-    date: "Apr 2021 - Jun 2021",
-    points: [
-      "Raised awareness about Internshala across the entire campus.",
-      "Encouraged students to explore Internshala training programs and internships.",
-      "Motivated students to enhance their skills by utilizing the opportunities provided by Internshala.",
-      "I stood 279 out of 21,963 students selected from different colleges across India",
-    ],
-  },
+  }
+ 
 ];
 
 const extracurricular = [
@@ -234,16 +224,16 @@ const extracurricular = [
     ],
     credential: "https://www.hackerrank.com/certificates/aac000e38dc9",
   },
-  {
-    title: "Web Development-Internshala",
-    type: "Certification",
-    icon: internshala,
-    iconBg: "#1294C8",
-    date: "Sept 2021",
-    points: ["Credential ID: 281DB109-2DA8-A160-DCBC-C6C0F552B57C"],
-    credential:
-      "https://trainings.internshala.com/verify-certificate/?certificate_number=281DB109-2DA8-A160-DCBC-C6C0F552B57C",
-  },
+  // {
+  //   title: "Web Development-Internshala",
+  //   type: "Certification",
+  //   icon: internshala,
+  //   iconBg: "#1294C8",
+  //   date: "Sept 2021",
+  //   points: ["Credential ID: 281DB109-2DA8-A160-DCBC-C6C0F552B57C"],
+  //   credential:
+  //     "https://trainings.internshala.com/verify-certificate/?certificate_number=281DB109-2DA8-A160-DCBC-C6C0F552B57C",
+  // },
   {
     title: "Combat Sport-Karate",
     type: "Extracurricular(Hobby)/Combat Sport",

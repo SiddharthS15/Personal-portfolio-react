@@ -22,9 +22,9 @@ import aws from "./tech/aws.png";
 import xavier from "./xavier.png";
 import oist from "./vit.png";
 
-import nextinnovation from "./company/nextinnovation.jpeg";
-import cognizant from "./company/cognizant.png";
-import internshala from "./company/internshala.webp";
+import aicte from "./company/aicte.jpeg";
+import cp from "./company/cp.png";
+import canspirit from "./company/canspirit.webp";
 
 import linkedin from "./company/linkedin.png";
 import hackerrank from "./company/hackerrank.png";
@@ -56,9 +56,9 @@ export {
   aws,
   xavier,
   oist,
-  nextinnovation,
-  cognizant,
-  internshala,
+  aicte,
+  cp,
+  canspirit,
   linkedin,
   hackerrank,
   karate,
