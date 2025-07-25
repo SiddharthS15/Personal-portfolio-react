@@ -3,16 +3,51 @@ import {
   backend,
   web,
   fullstack,
+  // Programming Languages
+  c,
   javascript,
   java,
+  python,
+  typescript,
+  // Web Fundamentals
   html,
   css,
+  // Frontend Libraries & Frameworks
+  bootstrap,
+  chakraUi,
+  figma,
+  framerMotion,
+  materialUi,
+  nextjs,
   reactjs,
-  ubuntu,
+  redux,
   tailwind,
+  threejs,
+  vuejs,
+  // Backend Technologies & APIs
+  django,
+  express,
+  flask,
+  graphql,
+  nodejs,
+  restapi,
+  // Databases
+  firebase,
+  mongodb,
   mysql,
-  linux,
+  // Cloud & DevOps
+  aws,
+  docker,
   git,
+  github,
+  linux,
+  ubuntu,
+  // Data Science & Machine Learning
+  matplotlib,
+  numpy,
+  pandas,
+  scikit,
+  // Other assets
   xavier,
   oist,
   aicte,
@@ -21,7 +56,6 @@ import {
   portfolio,
   pglife,
   sortingvisualiser,
-  aws,
 } from "../assets";
 
 export const navLinks = [
@@ -107,50 +141,56 @@ const education = [
 ];
 
 const technologies = [
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Ubuntu",
-    icon: ubuntu,
-  },
-  {
-    name: "MySQL",
-    icon: mysql,
-  },
-  {
-    name: "Linux",
-    icon: linux,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
+  // Programming Languages
+  { name: "C", icon: c },
+  { name: "Java", icon: java },
+  { name: "JavaScript", icon: javascript },
+  { name: "Python", icon: python },
+  { name: "TypeScript", icon: typescript },
+
+  // Web Fundamentals
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+
+  // Frontend Libraries & Frameworks
+  { name: "Bootstrap", icon: bootstrap },
+  { name: "Chakra UI", icon: chakraUi },
+  { name: "Figma", icon: figma },
+  { name: "Framer Motion", icon: framerMotion },
+  { name: "Material UI", icon: materialUi },
+  { name: "Next.js", icon: nextjs },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Three.js", icon: threejs },
+  { name: "Vue.js", icon: vuejs },
+
+  // Backend Technologies & APIs
+  { name: "Django", icon: django },
+  { name: "Express.js", icon: express },
+  { name: "Flask", icon: flask },
+  { name: "GraphQL", icon: graphql },
+  { name: "Node.js", icon: nodejs },
+  { name: "REST API", icon: restapi },
+
+  // Databases
+  { name: "Firebase", icon: firebase },
+  { name: "MongoDB", icon: mongodb },
+  { name: "MySQL", icon: mysql },
+
+  // Cloud & DevOps
+  { name: "AWS", icon: aws },
+  { name: "Docker", icon: docker },
+  { name: "Git", icon: git },
+  { name: "GitHub", icon: github },
+  { name: "Linux", icon: linux },
+  { name: "Ubuntu", icon: ubuntu },
+
+  // Data Science & Machine Learning
+  { name: "Matplotlib", icon: matplotlib },
+  { name: "NumPy", icon: numpy },
+  { name: "Pandas", icon: pandas },
+  { name: "Scikit-learn", icon: scikit },
 ];
 
 const experiences = [
