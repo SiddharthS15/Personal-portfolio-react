@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
-import { About, Contact, Education, Experience, Certifications, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import { About, Contact, Education, Experience, Extracurricular, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <About />
           <Education />
           <Experience />
-          <Certifications />
+          <Extracurricular />
           <Tech />
           <Works />
           <div className="div relative z-0">

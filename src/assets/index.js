@@ -34,24 +34,6 @@ import portfolio from "./3dportfolio.png";
 import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
 
-// Certificate imports (you can replace these with your actual certificate images)
-import cert1 from "./certificates/cert1.png";
-import cert2 from "./certificates/cert2.png";
-import cert3 from "./certificates/cert3.png";
-import cert4 from "./certificates/cert4.png";
-import cert5 from "./certificates/cert5.png";
-import cert6 from "./certificates/cert6.png";
-import cert7 from "./certificates/cert7.png";
-import cert8 from "./certificates/cert8.png";
-import cert9 from "./certificates/cert9.png";
-import cert10 from "./certificates/cert10.png";
-import cert11 from "./certificates/cert11.png";
-import cert12 from "./certificates/cert12.png";
-import cert13 from "./certificates/cert13.png";
-import cert14 from "./certificates/cert14.png";
-import cert15 from "./certificates/cert15.png";
-import cert16 from "./certificates/cert16.png";
-
 export {
   logo,
   backend,
@@ -83,20 +65,4 @@ export {
   portfolio,
   pglife,
   sortingvisualiser,
-  cert1,
-  cert2,
-  cert3,
-  cert4,
-  cert5,
-  cert6,
-  cert7,
-  cert8,
-  cert9,
-  cert10,
-  cert11,
-  cert12,
-  cert13,
-  cert14,
-  cert15,
-  cert16,
 };
