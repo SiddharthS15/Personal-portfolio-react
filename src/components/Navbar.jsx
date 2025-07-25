@@ -33,7 +33,7 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full flex justify-between items-center max-w-9xl mx-auto'>
         <Link
           to='/'
           className='flex items-center gap-2'
@@ -42,7 +42,17 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-14 h-15 object-contain' />
+          <img 
+            src={logo} 
+            alt='logo' 
+            className='w-12 h-18 object-cover rounded-lg' 
+            style={{
+              backgroundColor: scrolled ? 'transparent' : 'rgba(0, 0, 0, 0.1)',
+              padding: '4px',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}
+          />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             <span 
               className='sm:block hidden' 
@@ -55,7 +65,7 @@ const Navbar = () => {
                 fontWeight: "bold"
               }} 
             >
-              ᴘᴏʀᴛƒᴏʟɪᴏ
+              Siddharth
             </span>
           </p>
         </Link>

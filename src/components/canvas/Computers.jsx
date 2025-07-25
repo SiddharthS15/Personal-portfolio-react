@@ -31,6 +31,7 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -54,24 +55,42 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+    <div 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ 
+        width: '100%', 
+        height: '100%',
+        pointerEvents: isHovered ? 'all' : 'none'
+      }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+      <Canvas
+        frameloop='demand'
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+        style={{ pointerEvents: isHovered ? 'all' : 'none' }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI}
+            minPolarAngle={0}
+            enablePan={false}
+            autoRotate={!isHovered}
+            autoRotateSpeed={1}
+            enableDamping={true}
+            dampingFactor={0.05}
+            enabled={true}
+            enableRotate={isHovered}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 

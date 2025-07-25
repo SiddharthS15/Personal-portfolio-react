@@ -19,8 +19,8 @@ import linux from "./tech/linux.png";
 import tailwind from "./tech/tailwind.png";
 import aws from "./tech/aws.png";
 
-import samaritans from "./samaritans.png";
-import oist from "./oist.png";
+import xavier from "./xavier.png";
+import oist from "./vit.png";
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -54,7 +54,7 @@ export {
   tailwind,
   mysql,
   aws,
-  samaritans,
+  xavier,
   oist,
   nextinnovation,
   cognizant,
