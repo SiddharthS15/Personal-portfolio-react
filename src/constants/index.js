@@ -18,9 +18,6 @@ import {
   aicte,
   cp,
   canspirit,
-  linkedin,
-  hackerrank,
-  karate,
   portfolio,
   pglife,
   sortingvisualiser,
@@ -39,10 +36,6 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
-  },
-  {
-    id: "extracurricular",
-    title: "Extracurricular",
   },
   {
     id: "skills",
@@ -201,42 +194,6 @@ const experiences = [
  
 ];
 
-const extracurricular = [
-  {
-    title: "1.5K+ Connections on LinkedIn",
-    type: "Achievements",
-    icon: linkedin,
-    iconBg: "#007BB5",
-    date: "April 2023",
-    points: ["Credential ID: mohitsinghrajput"],
-    credential: "https://www.linkedin.com/in/mohitsinghrajput/",
-  },
-  {
-    title: "Java (Basic), CSS, SQL (Basic)-HackerRank",
-    type: "Certification",
-    icon: hackerrank,
-    iconBg: "#050C18",
-    date: "2022-2023",
-    points: [
-      "Credential ID: aac000e38dc9",
-      "Credential ID: a274bb1292eb",
-      "Credential ID: b024370fa737",
-    ],
-    credential: "https://www.hackerrank.com/certificates/aac000e38dc9",
-  },
-  {
-    title: "Combat Sport-Karate",
-    type: "Extracurricular(Hobby)/Combat Sport",
-    icon: karate,
-    iconBg: "#CCCFD8",
-    date: "2006-2020",
-    points: [
-      "State level Gold medalist in Kumite.",
-      "Renshi Cup National Championship Bronze medalist in Kumite.",
-    ],
-  },
-];
-
 const projects = [
   {
     name: "3D Portfolio",
@@ -323,7 +280,6 @@ export {
   services,
   technologies,
   experiences,
-  extracurricular,
   projects,
   education,
 };

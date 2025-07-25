@@ -26,10 +26,6 @@ import aicte from "./company/aicte.jpeg";
 import cp from "./company/cp.png";
 import canspirit from "./company/canspirit.webp";
 
-import linkedin from "./company/linkedin.png";
-import hackerrank from "./company/hackerrank.png";
-import karate from "./karate.jpg";
-
 import portfolio from "./3dportfolio.png";
 import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
@@ -59,9 +55,6 @@ export {
   aicte,
   cp,
   canspirit,
-  linkedin,
-  hackerrank,
-  karate,
   portfolio,
   pglife,
   sortingvisualiser,
