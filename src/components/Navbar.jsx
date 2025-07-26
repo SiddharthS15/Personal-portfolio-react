@@ -45,10 +45,11 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt='logo' 
-            className='w-12 h-18 object-cover rounded-lg' 
+            className='w-12 h-18 object-cover rounded-lg mr-0' 
             style={{
               backgroundColor: scrolled ? 'transparent' : 'rgba(0, 0, 0, 0.1)',
-              padding: '4px',
+              padding: '2px',
+              marginRight: '1px',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}
