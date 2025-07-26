@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [isLightOn, setIsLightOn] = useState(true);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -26,7 +28,22 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* Torch Toggle Button */}
+      <div className="absolute top-40 right-10 z-20">
+        <button
+          onClick={() => setIsLightOn(!isLightOn)}
+          className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+            isLightOn 
+              ? 'bg-yellow-400 border-yellow-500 text-yellow-900 shadow-lg shadow-yellow-300/50' 
+              : 'bg-gray-700 border-gray-600 text-gray-300'
+          }`}
+          title={isLightOn ? "Turn off light" : "Turn on light"}
+        >
+          {isLightOn ? '🔦' : '🔦'}
+        </button>
+      </div>
+
+      <ComputersCanvas isLightOn={isLightOn} />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
         <a href="#about">
