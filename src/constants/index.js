@@ -12,6 +12,8 @@ import {
   // Web Fundamentals
   html,
   css,
+  githubo,
+
   // Frontend Libraries & Frameworks
   bootstrap,
   chakraUi,
@@ -50,11 +52,13 @@ import {
   // Other assets
   xavier,
   oist,
+
   aicte,
   cp,
   canspirit,
-  portfolio,
-  pglife,
+  ai,
+  medipredict,
+  fashion,
   sortingvisualiser,
 } from "../assets";
 
@@ -186,7 +190,7 @@ const technologies = [
   { name: "AWS", icon: aws },
   { name: "Docker", icon: docker },
   { name: "Git", icon: git },
-  { name: "GitHub", icon: github },
+  { name: "GitHub", icon: githubo },
   { name: "Linux", icon: linux },
   { name: "Ubuntu", icon: ubuntu },
 
@@ -240,9 +244,9 @@ const experiences = [
 
 const projects = [
   {
-    name: "3D Portfolio",
+    name: "AI Medical Assistance",
     description:
-      "Web Portfolio in React JS which uses 3D graphics and animations to bring the content to life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
+      "A web application leveraging Google's Gemini AI for advanced medical assistance. Users can interact with the AI for health-related queries, upload PDF medical reports for analysis, and recognize text from images or scanned documents. The system provides summarized outputs and insights based on the recognized content, enhancing accessibility and understanding of medical information.",
     tags: [
       {
         name: "react",
@@ -253,29 +257,36 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "framer-motion",
+        name: "gemini-api",
         color: "pink-text-gradient",
       },
+      
       {
-        name: "three.js",
-        color: "blue-text-gradient",
+        name: "ocr",
+        color: "green-text-gradient",
       },
     ],
-    image: portfolio,
-    source_code_link: "https://github.com/mohitrajput2002/my-portfolio",
-    live_project_link: "https://mohit-singh-rajput.vercel.app/",
+    image: ai,
+    source_code_link: "https://github.com/SiddharthS15/gemini-medical-assistance",
+    live_project_link: "https://gemini-medical-assistance.up.railway.app/",
+    features: [
+      "Chat with Gemini AI for medical queries",
+      "Upload PDF reports for AI-powered summarization",
+      "Recognize and extract text from images (OCR)",
+      "Get clear, actionable outputs and summaries"
+    ]
   },
   {
-    name: "PG Life",
+    name: "MediPredict AI",
     description:
-      "The PG-Life Web Application is a platform designed to facilitate the management and search for Paying Guest (PG) accommodations. It allows users to explore available PG options, view details, and connect with potential landlords or tenants.",
+      "AI-powered web application that helps users identify potential diseases based on selected symptoms. Built with Python Flask and machine learning (scikit-learn), the app features a modern responsive interface with dark/light themes where users can select symptoms from a comprehensive list and receive instant predictions with confidence scores, detailed disease descriptions, and helpful precautions.",
     tags: [
       {
-        name: "html",
+        name: "flask",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "scikit-learn",
         color: "green-text-gradient",
       },
       {
@@ -287,12 +298,12 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: pglife,
-    source_code_link: "https://github.com/mohitrajput2002/PG_Life",
-    live_project_link: "https://github.com/mohitrajput2002/PG_Life",
+    image: medipredict,
+    source_code_link: "https://github.com/SiddharthS15/Disease_prediction_from_symptom",
+    live_project_link: "https://web-production-7fc33.up.railway.app/",
   },
   {
-    name: "Sorting Visualizer",
+    name: "Sorting Visualizer"  ,
     description:
       "The Sorting Visualizer is a web application that provides a visual representation of various sorting algorithms. It allows users to observe and understand how different sorting algorithms work by animating the sorting process.",
     tags: [
@@ -317,6 +328,32 @@ const projects = [
     source_code_link:
       "https://github.com/mohitrajput2002/sorting-visualizer-project.github.io.git",
     live_project_link: "https://sorting-visuallizer.netlify.app/",
+  },
+  {
+    name: "Fashion Store",
+    description:
+      "The Fashion Store Web Application is a platform designed to facilitate the management and search for fashion products. It allows users to explore available fashion options, view details, and connect with potential sellers. Just buy the clothe (Men/Women). More functionalities coming soon.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: fashion,
+    source_code_link: "https://github.com/SiddharthS15/E-com",
+    live_project_link: "https://e-com-beta-orpin.vercel.app/index.html",
   },
 ];
 

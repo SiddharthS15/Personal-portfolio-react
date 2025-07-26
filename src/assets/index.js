@@ -62,10 +62,12 @@ import aicte from "./company/aicte.jpeg";
 import cp from "./company/cp.png";
 import canspirit from "./company/canspirit.webp";
 
-import portfolio from "./3dportfolio.png";
-import pglife from "./pglife.png";
+import ai from "./ai.png";
+import medipredict from "./medipredict.png";
+import fashion from "./fashion.png";
 import sortingvisualiser from "./sortingvisualiser.png";
 import leetcodeLogo from "./leetcode-logo.jpg";
+import githubo from "./githubo.png";
 
 export {
   logo,
@@ -121,11 +123,14 @@ export {
   // Other assets
   xavier,
   oist,
+  githubo,
   aicte,
   cp,
   canspirit,
-  portfolio,
-  pglife,
+  ai,
+  medipredict,
+  fashion
+,
   sortingvisualiser,
   leetcodeLogo,
 };
