@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
-import { About, Contact, Education, Experience, Navbar, Tech, Works, StarsCanvas } from './components'
+import { About, Contact, Education, Experience, Navbar, Tech, Works, LeetCode, StarsCanvas } from './components'
 import Hero from './components/Hero_new'
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           <Education />
           <Experience />
           <Tech />
+          <LeetCode />
           <Works />
           <div className="div relative z-0">
             <Contact />

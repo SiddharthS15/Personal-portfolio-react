@@ -11,6 +11,7 @@ import Tech from "./Tech";
 import Education from "./Education";
 import Experience from "./Experience";
 import Works from "./Works";
+import LeetCode from "./LeetCode";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
@@ -22,6 +23,7 @@ export {
   Education,
   Experience,
   Works,
+  LeetCode,
   Contact,
   CanvasLoader,
   EarthCanvas,

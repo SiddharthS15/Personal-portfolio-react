@@ -76,6 +76,10 @@ export const navLinks = [
     title: "Skills",
   },
   {
+    id: "leetcode",
+    title: "LeetCode",
+  },
+  {
     id: "projects",
     title: "Projects",
   },
