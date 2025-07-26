@@ -65,6 +65,7 @@ import canspirit from "./company/canspirit.webp";
 import portfolio from "./3dportfolio.png";
 import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
+import leetcodeLogo from "./leetcode-logo.jpg";
 
 export {
   logo,
@@ -126,4 +127,5 @@ export {
   portfolio,
   pglife,
   sortingvisualiser,
+  leetcodeLogo,
 };

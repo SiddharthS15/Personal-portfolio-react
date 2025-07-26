@@ -3,15 +3,16 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { leetcodeLogo } from "../assets";
 
 const LeetCode = () => {
   const leetcodeStats = {
     username: "SiddharthS15",
     profileUrl: "https://leetcode.com/u/SiddharthS15/",
-    totalSolved: "150+", // You can update this with actual stats
-    easyProblems: "80+",
-    mediumProblems: "60+",
-    hardProblems: "10+",
+    totalSolved: "230+", // You can update this with actual stats
+    easyProblems: "85+",
+    mediumProblems: "114+",
+    hardProblems: "38+",
     ranking: "Top 15%", // You can update this with actual ranking
   };
 
@@ -64,7 +65,11 @@ const LeetCode = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               {/* LeetCode Logo/Icon */}
               <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-3xl font-bold text-white">LC</span>
+                <img
+                  src={leetcodeLogo}
+                  alt="LeetCode Logo"
+                  className="w-14 h-14 object-contain"
+                />
               </div>
               
               {/* Username */}
