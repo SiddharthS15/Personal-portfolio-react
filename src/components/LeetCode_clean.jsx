@@ -146,10 +146,10 @@ const LeetCode = () => {
               Primary Languages
             </h4>
             <div className="flex flex-wrap gap-2">
-              {["Python", "JavaScript", "Java", "C"].map((lang, index) => (
+              {["Python", "JavaScript", "Java", "C++"].map((lang, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-[#915EFF]/20 text-[#915EFF] rounded-full text-sm font-medium cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-[#915EFF]/40 hover:shadow-lg hover:shadow-[#915EFF]/20"
+                  className="px-3 py-1 bg-[#915EFF]/20 text-[#915EFF] rounded-full text-sm font-medium"
                 >
                   {lang}
                 </span>
@@ -158,6 +158,22 @@ const LeetCode = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Call to Action */}
+      <motion.div
+        variants={fadeIn("up", "spring", 1.5, 0.75)}
+        className="mt-12 text-center"
+      >
+        <p className="text-secondary text-[16px] mb-4">
+          Want to collaborate on algorithmic challenges or discuss problem-solving approaches?
+        </p>
+        <button
+          onClick={() => window.open(leetcodeStats.profileUrl, '_blank')}
+          className="bg-transparent border-2 border-[#915EFF] text-[#915EFF] hover:bg-[#915EFF] hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+        >
+          Connect on LeetCode
+        </button>
+      </motion.div>
     </>
   );
 };
