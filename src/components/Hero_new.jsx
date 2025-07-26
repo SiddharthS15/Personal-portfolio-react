@@ -28,19 +28,30 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Torch Toggle Button */}
-      <div className="absolute top-40 right-10 z-20">
-        <button
-          onClick={() => setIsLightOn(!isLightOn)}
-          className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
-            isLightOn 
-              ? 'bg-yellow-400 border-yellow-500 text-yellow-900 shadow-lg shadow-yellow-300/50' 
-              : 'bg-gray-700 border-gray-600 text-gray-300'
-          }`}
-          title={isLightOn ? "Turn off light" : "Turn on light"}
-        >
-          {isLightOn ? '🔦' : '🔦'}
-        </button>
+      {/* Light Bulb Toggle Button - Left Side of Screen */}
+      <div className="absolute top-1/2 left-10 transform -translate-y-1/2 z-20">
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => setIsLightOn(!isLightOn)}
+            className={`w-16 h-16 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+              isLightOn 
+                ? 'bg-yellow-400 border-yellow-500 text-yellow-900 shadow-lg shadow-yellow-300/50' 
+                : 'bg-gray-700 border-gray-600 text-gray-300'
+            }`}
+            title={isLightOn ? "Turn off light" : "Turn on light"}
+          >
+            <span className="text-2xl">�</span>
+          </button>
+          
+          {/* Light Rays Animation */}
+          {isLightOn && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute w-20 h-20 border-2 border-yellow-300/30 rounded-full animate-ping"></div>
+              <div className="absolute w-24 h-24 border border-yellow-200/20 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute w-28 h-28 border border-yellow-100/10 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+            </div>
+          )}
+        </div>
       </div>
 
       <ComputersCanvas isLightOn={isLightOn} />
