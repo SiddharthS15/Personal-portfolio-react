@@ -28,11 +28,18 @@ const ProjectCard = ({
   };
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div
-        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full max-w-[400px] mx-auto'
+    <div className="w-full h-full">
+      <motion.div 
+        variants={fadeIn("up", "spring", index * 0.1, 0.5)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.05 }}
+        className="w-full h-full"
       >
-        <div className='relative w-full h-[200px] sm:h-[230px]'>
+        <div
+          className='bg-tertiary p-3 sm:p-4 lg:p-5 rounded-2xl w-full max-w-[400px] mx-auto shadow-lg min-h-[380px] sm:min-h-[420px] flex flex-col'
+        >
+        <div className='relative w-full h-[180px] sm:h-[200px] lg:h-[230px]'>
           <img
             src={image}
             alt='project_image'
@@ -53,16 +60,16 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className='mt-4 sm:mt-5'>
-          <h3 className='text-white font-bold text-[20px] sm:text-[22px] lg:text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[13px] sm:text-[14px] leading-[18px] sm:leading-[20px]'>{description}</p>
+        <div className='mt-3 sm:mt-4 lg:mt-5 flex-grow'>
+          <h3 className='text-white font-bold text-[16px] sm:text-[18px] lg:text-[20px] leading-tight mb-2'>{name}</h3>
+          <p className='text-secondary text-[11px] sm:text-[12px] lg:text-[14px] leading-[15px] sm:leading-[16px] lg:leading-[20px]'>{description}</p>
         </div>
 
-        <div className='mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center sm:justify-start'>
+        <div className='mt-3 sm:mt-4 flex flex-wrap gap-1.5 sm:gap-2 justify-start'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[11px] sm:text-[12px] lg:text-[14px] ${tag.color} px-2 py-1 rounded-full bg-black-200/50`}
+              className={`text-[9px] sm:text-[10px] lg:text-[12px] ${tag.color} px-2 py-1 rounded-full bg-black-200/50 font-medium`}
             >
               #{tag.name}
             </p>
@@ -72,7 +79,7 @@ const ProjectCard = ({
         {/* Live Project Button - Always show */}
         <button 
           onClick={handleLiveProjectClick}
-          className="mt-3 sm:mt-4 bg-primary hover:bg-primary-dark text-white px-3 sm:px-4 py-2 sm:py-3 rounded-md font-medium w-full transition-colors text-sm sm:text-base"
+          className="mt-3 sm:mt-4 bg-primary hover:bg-primary-dark text-white px-3 sm:px-4 py-2 sm:py-2.5 lg:py-3 rounded-md font-medium w-full transition-colors text-xs sm:text-sm lg:text-base flex-shrink-0"
         >
           {live_project_link ? "Live Project" : "Live Project"}
         </button>
@@ -100,23 +107,24 @@ const ProjectCard = ({
             </div>
           </div>
         )}
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="px-4 sm:px-0">
-        <p className={`${styles.sectionSubText} text-center sm:text-left`}>My work</p>
-        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Projects.</h2>
+      <motion.div variants={textVariant()} className="px-2 sm:px-4 lg:px-0">
+        <p className={`${styles.sectionSubText} text-center`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex px-4'>
+      <div className='w-full flex px-2 sm:px-4 lg:px-0'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[14px] sm:text-[16px] lg:text-[17px] max-w-3xl leading-[24px] sm:leading-[28px] lg:leading-[30px] text-center mx-auto'
+          className='mt-3 text-secondary text-[12px] sm:text-[14px] lg:text-[17px] max-w-3xl leading-[18px] sm:leading-[24px] lg:leading-[30px] text-center mx-auto'
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -126,16 +134,21 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 px-4 sm:px-0'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      {/* Projects Grid - Always visible on mobile */}
+      <div className='mt-8 sm:mt-12 lg:mt-20 w-full overflow-visible'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-7 px-2 sm:px-4 lg:px-0'>
+          {projects.map((project, index) => (
+            <div key={`project-${index}`} className="w-full">
+              <ProjectCard index={index} {...project} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Want to see more section */}
       <motion.div 
         variants={fadeIn("up", "spring", 0.5, 0.75)}
-        className="mt-12 sm:mt-16 bg-black-100/50 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-[#915EFF]/20 mx-4 sm:mx-0"
+        className="mt-8 sm:mt-12 lg:mt-16 bg-black-100/50 backdrop-blur-sm p-3 sm:p-6 lg:p-8 rounded-2xl border border-[#915EFF]/20 mx-2 sm:mx-4 lg:mx-0"
       >
         <div className="text-center">
           <h3 className="text-white font-bold text-[20px] sm:text-[22px] lg:text-[24px] mb-3 sm:mb-4">

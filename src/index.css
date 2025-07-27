@@ -13,6 +13,22 @@
   color-scheme: dark;
 }
 
+/* Mobile-specific fixes for project visibility */
+@media (max-width: 640px) {
+  .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .bg-tertiary {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
