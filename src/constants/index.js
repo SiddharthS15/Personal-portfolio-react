@@ -13,6 +13,8 @@ import {
   html,
   css,
   githubo,
+  weather,
+  agriclimate,
 
   // Frontend Libraries & Frameworks
   bootstrap,
@@ -59,7 +61,7 @@ import {
   ai,
   medipredict,
   fashion,
-  sortingvisualiser,
+  todo,
 } from "../assets";
 
 export const navLinks = [
@@ -260,7 +262,6 @@ const projects = [
         name: "gemini-api",
         color: "pink-text-gradient",
       },
-      
       {
         name: "ocr",
         color: "green-text-gradient",
@@ -302,10 +303,37 @@ const projects = [
     source_code_link: "https://github.com/SiddharthS15/Disease_prediction_from_symptom",
     live_project_link: "https://web-production-7fc33.up.railway.app/",
   },
-  {
-    name: "Sorting Visualizer"  ,
+   {
+    name: "Agriclimate-analytics",
     description:
-      "The Sorting Visualizer is a web application that provides a visual representation of various sorting algorithms. It allows users to observe and understand how different sorting algorithms work by animating the sorting process.",
+      "Agriclimate-analytics is a web application that provides weather information specifically tailored for agricultural needs. Users can enter a location and receive real-time weather data, including temperature, humidity, and precipitation forecasts. This app is designed to help farmers and agricultural professionals make informed decisions based on weather conditions from the ML models.",
+    tags: [
+      {
+        name: "flask",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "google-translate",
+        color: "green-text-gradient",
+      },
+    ],
+    image: agriclimate,
+    source_code_link: "https://github.com/SiddharthS15/Agriclimate/tree/main/agriclimate",
+    live_project_link: null, // Keep button as others, but handle click in UI
+    live_project_status: "Developer is working on making it live", // Show this in popup on button click
+  },
+  {
+    name: "Todo App",
+    description:
+      "The Todo App is a web application that allows users to manage their tasks efficiently. Users can add, edit, and delete tasks, as well as mark them as complete. The app features a clean and intuitive interface, making it easy for users to keep track of their to-do items. Mobile-responsive design  Clean, colorful UI with smooth interactions",
     tags: [
       {
         name: "html",
@@ -319,15 +347,12 @@ const projects = [
         name: "javascript",
         color: "pink-text-gradient",
       },
-      {
-        name: "bootstrap",
-        color: "blue-text-gradient",
-      },
+      
     ],
-    image: sortingvisualiser,
+    image: todo,
     source_code_link:
-      "https://github.com/mohitrajput2002/sorting-visualizer-project.github.io.git",
-    live_project_link: "https://sorting-visuallizer.netlify.app/",
+      "https://github.com/SiddharthS15/Todo-app",
+    live_project_link: "https://todo-app-sigma-ochre-87.vercel.app/",
   },
   {
     name: "Fashion Store",
@@ -355,6 +380,33 @@ const projects = [
     source_code_link: "https://github.com/SiddharthS15/E-com",
     live_project_link: "https://e-com-beta-orpin.vercel.app/index.html",
   },
+  {
+    name: "Simple Weather App",
+    description:
+      "The Simple Weather App is a web application that provides weather information for a specific location. Users can enter a city name and receive real-time weather data, including temperature, humidity, and weather conditions. Someone looking for quick weather updates can easily use this app for instant results.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: weather,
+    source_code_link: "https://github.com/SiddharthS15/Weather-app-html-css-js",
+    live_project_link: "https://weather-app-html-css-js-chi.vercel.app/",
+  },
+ 
 ];
 
 export {

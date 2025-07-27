@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -15,7 +15,18 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_project_link,
+  live_project_status,
 }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleLiveProjectClick = () => {
+    if (live_project_link) {
+      window.open(live_project_link, "_blank");
+    } else {
+      setShowPopup(true);
+    }
+  };
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div
@@ -58,12 +69,36 @@ const ProjectCard = ({
           ))}
         </div>
 
-        {live_project_link && (
-          <a href={live_project_link} target="_blank" rel="noopener noreferrer">
-            <button className="mt-3 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium">
-              Live Project
-            </button>
-          </a>
+        {/* Live Project Button - Always show */}
+        <button 
+          onClick={handleLiveProjectClick}
+          className="mt-3 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium w-full transition-colors"
+        >
+          {live_project_link ? "Live Project" : "Live Project"}
+        </button>
+
+        {/* Popup for projects without live links */}
+        {showPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-tertiary p-6 rounded-xl max-w-sm mx-4 relative">
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-2 right-2 text-white hover:text-gray-300 text-xl font-bold"
+              >
+                ×
+              </button>
+              <h3 className="text-white font-bold text-lg mb-3">Live Project Status</h3>
+              <p className="text-secondary text-sm mb-4">
+                {live_project_status || "This project is currently in development."}
+              </p>
+              <button
+                onClick={() => setShowPopup(false)}
+                className="bg-[#915EFF] hover:bg-[#7c3aed] text-white px-4 py-2 rounded-md font-medium w-full transition-colors"
+              >
+                Understood
+              </button>
+            </div>
+          </div>
         )}
       </div>
     </motion.div>

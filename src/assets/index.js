@@ -15,6 +15,7 @@ import javascript from "./tech/javascript.png";
 import java from "./tech/java.png";
 import python from "./tech/python.png";
 import typescript from "./tech/typescript.png";
+import agriclimate from "./agriclimate.png";
 
 // Frontend Libraries & Frameworks
 import bootstrap from "./tech/bootstrap.png";
@@ -65,9 +66,10 @@ import canspirit from "./company/canspirit.webp";
 import ai from "./ai.png";
 import medipredict from "./medipredict.png";
 import fashion from "./fashion.png";
-import sortingvisualiser from "./sortingvisualiser.png";
+import todo from "./todo.png";
 import leetcodeLogo from "./leetcode-logo.jpg";
 import githubo from "./githubo.png";
+import weather from "./weather.png";
 
 export {
   logo,
@@ -89,6 +91,7 @@ export {
   // Frontend Libraries & Frameworks
   bootstrap,
   chakraUi,
+  weather,
   figma,
   framerMotion,
   materialUi,
@@ -129,8 +132,9 @@ export {
   canspirit,
   ai,
   medipredict,
-  fashion
-,
-  sortingvisualiser,
+  fashion,
+  agriclimate,
+
+  todo,
   leetcodeLogo,
 };
