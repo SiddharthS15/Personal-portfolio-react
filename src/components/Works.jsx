@@ -131,6 +131,58 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+
+      {/* Want to see more section */}
+      <motion.div 
+        variants={fadeIn("up", "spring", 0.5, 0.75)}
+        className="mt-16 bg-black-100/50 backdrop-blur-sm p-8 rounded-2xl border border-[#915EFF]/20"
+      >
+        <div className="text-center">
+          <h3 className="text-white font-bold text-[24px] mb-4">
+            Want to see more projects?
+          </h3>
+          <p className="text-secondary text-[16px] mb-6 max-w-2xl mx-auto">
+            Check out my complete collection of projects work on GitHub. 
+            You can also explore the source code for this portfolio website.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* GitHub Profile Button */}
+            <button
+              onClick={() => window.open("https://github.com/SiddharthS15", "_blank")}
+              className="flex items-center gap-3 bg-gradient-to-r from-[#333] to-[#555] hover:from-[#555] hover:to-[#777] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+            >
+              <img src={githubo} alt="GitHub" className="w-6 h-6" />
+              <span>Visit GitHub Profile</span>
+            </button>
+
+            {/* Portfolio Source Code Button */}
+            <button
+              onClick={() => window.open("https://github.com/SiddharthS15/Personal-portfolio-react", "_blank")}
+              className="flex items-center gap-3 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+            >
+              <img src={githubo} alt="GitHub" className="w-6 h-6" />
+              <span>Portfolio Source Code</span>
+            </button>
+          </div>
+
+          {/* Additional info */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center text-secondary text-[14px]">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              <span>Open Source Projects</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+              <span>Regular Contributions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+              <span>Clean Code Practices</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };
