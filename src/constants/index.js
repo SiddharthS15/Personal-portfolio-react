@@ -269,7 +269,7 @@ const projects = [
     ],
     image: ai,
     source_code_link: "https://github.com/SiddharthS15/gemini-medical-assistance",
-    live_project_link: "https://gemini-medical-assistance.up.railway.app/",
+    live_project_link: "https://ai-medical-assistance-production.up.railway.app/",
     features: [
       "Chat with Gemini AI for medical queries",
       "Upload PDF reports for AI-powered summarization",
