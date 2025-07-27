@@ -30,7 +30,7 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full sm:w-[360px] max-w-[400px] mx-auto'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -58,11 +58,11 @@ const ProjectCard = ({
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 justify-center sm:justify-start'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[12px] sm:text-[14px] ${tag.color} px-2 py-1 rounded-full bg-black-200/50`}
             >
               #{tag.name}
             </p>
@@ -72,22 +72,22 @@ const ProjectCard = ({
         {/* Live Project Button - Always show */}
         <button 
           onClick={handleLiveProjectClick}
-          className="mt-3 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium w-full transition-colors"
+          className="mt-4 bg-primary hover:bg-primary-dark text-white px-4 py-2 sm:py-3 rounded-md font-medium w-full transition-colors text-sm sm:text-base"
         >
           {live_project_link ? "Live Project" : "Live Project"}
         </button>
 
         {/* Popup for projects without live links */}
         {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-tertiary p-6 rounded-xl max-w-sm mx-4 relative">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-tertiary p-4 sm:p-6 rounded-xl max-w-xs sm:max-w-sm w-full mx-4 relative">
               <button
                 onClick={() => setShowPopup(false)}
-                className="absolute top-2 right-2 text-white hover:text-gray-300 text-xl font-bold"
+                className="absolute top-2 right-2 text-white hover:text-gray-300 text-xl font-bold w-8 h-8 flex items-center justify-center"
               >
                 ×
               </button>
-              <h3 className="text-white font-bold text-lg mb-3">Live Project Status</h3>
+              <h3 className="text-white font-bold text-lg mb-3 pr-8">Live Project Status</h3>
               <p className="text-secondary text-sm mb-4">
                 {live_project_status || "This project is currently in development."}
               </p>
@@ -146,28 +146,28 @@ const Works = () => {
             You can also explore the source code for this portfolio website.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             {/* GitHub Profile Button */}
             <button
               onClick={() => window.open("https://github.com/SiddharthS15", "_blank")}
-              className="flex items-center gap-3 bg-gradient-to-r from-[#333] to-[#555] hover:from-[#555] hover:to-[#777] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+              className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#333] to-[#555] hover:from-[#555] hover:to-[#777] text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[200px]"
             >
-              <img src={githubo} alt="GitHub" className="w-6 h-6" />
-              <span>Visit GitHub Profile</span>
+              <img src={githubo} alt="GitHub" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <span className="text-sm sm:text-base">Visit GitHub Profile</span>
             </button>
 
             {/* Portfolio Source Code Button */}
             <button
               onClick={() => window.open("https://github.com/SiddharthS15/Personal-portfolio-react", "_blank")}
-              className="flex items-center gap-3 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+              className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[200px]"
             >
-              <img src={githubo} alt="GitHub" className="w-6 h-6" />
-              <span>Portfolio Source Code</span>
+              <img src={githubo} alt="GitHub" className="w-5 h-5 sm:w-6 sm:h-6" />
+              <span className="text-sm sm:text-base">Portfolio Source Code</span>
             </button>
           </div>
 
           {/* Additional info */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center text-secondary text-[14px]">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center text-secondary text-[12px] sm:text-[14px] px-4">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-400 rounded-full"></span>
               <span>Open Source Projects</span>
