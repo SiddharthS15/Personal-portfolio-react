@@ -108,7 +108,7 @@ const LeetCode = () => {
             {/* Visit Profile Button */}
             <button
               onClick={() => window.open(leetcodeStats.profileUrl, '_blank')}
-              className="w-full bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] to-[#915EFF] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="w-full bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Visit LeetCode Profile
             </button>

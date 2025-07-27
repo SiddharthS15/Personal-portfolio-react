@@ -7,9 +7,6 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -40,7 +37,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "siddharth Sadake",
+          to_name: "Siddharth Sadake",
           from_email: form.email,
           to_email: "siddharth.sadake@gmail.com",
           location: form.location,
@@ -88,7 +85,7 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faUser} size="1x" style={{ color: "#915EFF" }} /> Name
+              👤 Name
             </span>
             <input
               type='text'
@@ -102,7 +99,7 @@ const Contact = () => {
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faEnvelope} size="1x" style={{ color: "#915EFF" }} /> Email Id
+              📧 Email Id
             </span>
             <input
               type='email'
@@ -116,14 +113,14 @@ const Contact = () => {
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" style={{ color: "#915EFF" }} /> Location
+              📍 Location
             </span>
             <input
-              type='email'
-              name='email'
+              type='text'
+              name='location'
               value={form.location}
               onChange={handleChange}
-              placeholder="Pune , Maharashtraa"
+              placeholder="Pune, Maharashtra"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               disabled
             />
