@@ -30,39 +30,39 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div
-        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full sm:w-[360px] max-w-[400px] mx-auto'
+        className='bg-tertiary p-4 sm:p-5 rounded-2xl w-full max-w-[400px] mx-auto'
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[200px] sm:h-[230px]'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-end m-2 sm:m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-8 h-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={githubo}
                 alt='source code'
-                className='w-8 h-8 object-contain'
+                className='w-6 h-6 sm:w-8 sm:h-8 object-contain'
               />
             </div>
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <div className='mt-4 sm:mt-5'>
+          <h3 className='text-white font-bold text-[20px] sm:text-[22px] lg:text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[13px] sm:text-[14px] leading-[18px] sm:leading-[20px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2 justify-center sm:justify-start'>
+        <div className='mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center sm:justify-start'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[12px] sm:text-[14px] ${tag.color} px-2 py-1 rounded-full bg-black-200/50`}
+              className={`text-[11px] sm:text-[12px] lg:text-[14px] ${tag.color} px-2 py-1 rounded-full bg-black-200/50`}
             >
               #{tag.name}
             </p>
@@ -72,7 +72,7 @@ const ProjectCard = ({
         {/* Live Project Button - Always show */}
         <button 
           onClick={handleLiveProjectClick}
-          className="mt-4 bg-primary hover:bg-primary-dark text-white px-4 py-2 sm:py-3 rounded-md font-medium w-full transition-colors text-sm sm:text-base"
+          className="mt-3 sm:mt-4 bg-primary hover:bg-primary-dark text-white px-3 sm:px-4 py-2 sm:py-3 rounded-md font-medium w-full transition-colors text-sm sm:text-base"
         >
           {live_project_link ? "Live Project" : "Live Project"}
         </button>
@@ -87,13 +87,13 @@ const ProjectCard = ({
               >
                 ×
               </button>
-              <h3 className="text-white font-bold text-lg mb-3 pr-8">Live Project Status</h3>
-              <p className="text-secondary text-sm mb-4">
+              <h3 className="text-white font-bold text-base sm:text-lg mb-3 pr-8">Live Project Status</h3>
+              <p className="text-secondary text-xs sm:text-sm mb-4 leading-relaxed">
                 {live_project_status || "This project is currently in development."}
               </p>
               <button
                 onClick={() => setShowPopup(false)}
-                className="bg-[#915EFF] hover:bg-[#7c3aed] text-white px-4 py-2 rounded-md font-medium w-full transition-colors"
+                className="bg-[#915EFF] hover:bg-[#7c3aed] text-white px-4 py-2 rounded-md font-medium w-full transition-colors text-sm"
               >
                 Understood
               </button>
@@ -108,15 +108,15 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+      <motion.div variants={textVariant()} className="px-4 sm:px-0">
+        <p className={`${styles.sectionSubText} text-center sm:text-left`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} text-center sm:text-left`}>Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className='w-full flex px-4'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[14px] sm:text-[16px] lg:text-[17px] max-w-3xl leading-[24px] sm:leading-[28px] lg:leading-[30px] text-center mx-auto'
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -126,7 +126,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 px-4 sm:px-0'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -135,39 +135,39 @@ const Works = () => {
       {/* Want to see more section */}
       <motion.div 
         variants={fadeIn("up", "spring", 0.5, 0.75)}
-        className="mt-16 bg-black-100/50 backdrop-blur-sm p-8 rounded-2xl border border-[#915EFF]/20"
+        className="mt-12 sm:mt-16 bg-black-100/50 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-2xl border border-[#915EFF]/20 mx-4 sm:mx-0"
       >
         <div className="text-center">
-          <h3 className="text-white font-bold text-[24px] mb-4">
+          <h3 className="text-white font-bold text-[20px] sm:text-[22px] lg:text-[24px] mb-3 sm:mb-4">
             Want to see more projects?
           </h3>
-          <p className="text-secondary text-[16px] mb-6 max-w-2xl mx-auto">
+          <p className="text-secondary text-[13px] sm:text-[15px] lg:text-[16px] mb-4 sm:mb-6 max-w-2xl mx-auto leading-[20px] sm:leading-[24px] px-2">
             Check out my complete collection of projects work on GitHub. 
             You can also explore the source code for this portfolio website.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 sm:px-4">
             {/* GitHub Profile Button */}
             <button
               onClick={() => window.open("https://github.com/SiddharthS15", "_blank")}
-              className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#333] to-[#555] hover:from-[#555] hover:to-[#777] text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[200px]"
+              className="flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-[#333] to-[#555] hover:from-[#555] hover:to-[#777] text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px]"
             >
-              <img src={githubo} alt="GitHub" className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="text-sm sm:text-base">Visit GitHub Profile</span>
+              <img src={githubo} alt="GitHub" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+              <span className="text-xs sm:text-sm lg:text-base">Visit GitHub Profile</span>
             </button>
 
             {/* Portfolio Source Code Button */}
             <button
               onClick={() => window.open("https://github.com/SiddharthS15/Personal-portfolio-react", "_blank")}
-              className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[200px]"
+              className="flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 w-full sm:w-auto sm:min-w-[180px] lg:min-w-[200px]"
             >
-              <img src={githubo} alt="GitHub" className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span className="text-sm sm:text-base">Portfolio Source Code</span>
+              <img src={githubo} alt="GitHub" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+              <span className="text-xs sm:text-sm lg:text-base">Portfolio Source Code</span>
             </button>
           </div>
 
           {/* Additional info */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center text-secondary text-[12px] sm:text-[14px] px-4">
+          <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center text-secondary text-[10px] sm:text-[12px] lg:text-[14px] px-2 sm:px-4">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-400 rounded-full"></span>
               <span>Open Source Projects</span>
