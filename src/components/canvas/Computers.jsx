@@ -17,25 +17,73 @@ const Computers = ({ isMobile, isLightOn = true }) => {
     scale = 0.72;
     position = [0, -3.5, -1.8];
   }
-  return (
-    <mesh position={[0, -0.5, 0]}>
-      <hemisphereLight intensity={isLightOn ? 0.15 : 0.05} groundColor='black' />
-      <spotLight
-        position={[-25, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={isLightOn ? 1 : 0.2}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={isLightOn ? 1 : 0.3} />
-      <primitive
-        object={scene}
-        scale={scale}
-        position={position}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
+
+  // Animated rotation effect
+  const [rotationY, setRotationY] = useState(-0.2);
+  useEffect(() => {
+    let frame;
+    const animate = () => {
+      setRotationY((prev) => prev + 0.002);
+      frame = requestAnimationFrame(animate);
+    };
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  // Glow effect for screen (simple mesh overlay)
+  const screenGlow = (
+    <mesh position={[0, -3.2, -1.1]}>
+      <planeGeometry args={[1.2, 0.7]} />
+      <meshBasicMaterial color={isLightOn ? '#ffe066' : '#222'} transparent opacity={isLightOn ? 0.25 : 0.1} />
     </mesh>
+  );
+
+  // Pulsing shadow effect
+  const [shadowOpacity, setShadowOpacity] = useState(0.3);
+  useEffect(() => {
+    let up = true;
+    let frame;
+    const pulse = () => {
+      setShadowOpacity((prev) => {
+        if (up && prev < 0.5) return prev + 0.01;
+        if (!up && prev > 0.2) return prev - 0.01;
+        up = !up;
+        return prev;
+      });
+      frame = requestAnimationFrame(pulse);
+    };
+    frame = requestAnimationFrame(pulse);
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  return (
+    <group>
+      {/* Subtle pulsing shadow under computer */}
+      <mesh position={[0, -4.2, -1.5]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[1.2, 32]} />
+        <meshBasicMaterial color={'#222'} transparent opacity={shadowOpacity} />
+      </mesh>
+      <mesh position={[0, -0.5, 0]}>
+        <hemisphereLight intensity={isLightOn ? 0.15 : 0.05} groundColor='black' />
+        <spotLight
+          position={[-25, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={isLightOn ? 1 : 0.2}
+          castShadow
+          shadow-mapSize={1024}
+        />
+        <pointLight intensity={isLightOn ? 1 : 0.3} />
+        <primitive
+          object={scene}
+          scale={scale}
+          position={position}
+          rotation={[-0.01, rotationY, -0.1]}
+        />
+      </mesh>
+      {/* Glow overlay for screen */}
+      {screenGlow}
+    </group>
   );
 };
 
