@@ -246,6 +246,7 @@ const experiences = [
 
 const projects = [
   {
+    lastUpdated: "2025-07-29",
     name: "AI Medical Assistance",
     description:
       "A web application leveraging Google's Gemini AI for advanced medical assistance. Users can interact with the AI for health-related queries, upload PDF medical reports for analysis, and recognize text from images or scanned documents. The system provides summarized outputs and insights based on the recognized content, enhancing accessibility and understanding of medical information.",
@@ -278,6 +279,7 @@ const projects = [
     ]
   },
   {
+    lastUpdated: "2025-07-29",
     name: "MediPredict AI",
     description:
       "AI-powered web application that helps users identify potential diseases based on selected symptoms. Built with Python Flask and machine learning (scikit-learn), the app features a modern responsive interface with dark/light themes where users can select symptoms from a comprehensive list and receive instant predictions with confidence scores, detailed disease descriptions, and helpful precautions.",
@@ -304,6 +306,7 @@ const projects = [
     live_project_link: "https://web-production-7fc33.up.railway.app/",
   },
    {
+    lastUpdated: "2025-07-29",
     name: "Agriclimate-analytics",
     description:
       "Agriclimate-analytics is a web application that provides weather information specifically tailored for agricultural needs. Users can enter a location and receive real-time weather data, including temperature, humidity, and precipitation forecasts. This app is designed to help farmers and agricultural professionals make informed decisions based on weather conditions from the ML models.",
@@ -331,6 +334,7 @@ const projects = [
     live_project_status: "Developer is working on making it live", // Show this in popup on button click
   },
   {
+    lastUpdated: "2025-07-29",
     name: "Todo App",
     description:
       "The Todo App is a web application that allows users to manage their tasks efficiently. Users can add, edit, and delete tasks, as well as mark them as complete. The app features a clean and intuitive interface, making it easy for users to keep track of their to-do items. Mobile-responsive design  Clean, colorful UI with smooth interactions",
@@ -355,6 +359,7 @@ const projects = [
     live_project_link: "https://todo-app-sigma-ochre-87.vercel.app/",
   },
   {
+    lastUpdated: "2025-07-29",
     name: "Fashion Store",
     description:
       "The Fashion Store Web Application is a platform designed to facilitate the management and search for fashion products. It allows users to explore available fashion options, view details, and connect with potential sellers. Just buy the clothe (Men/Women). More functionalities coming soon.",
@@ -381,6 +386,7 @@ const projects = [
     live_project_link: "https://e-com-beta-orpin.vercel.app/index.html",
   },
   {
+    lastUpdated: "2025-07-29",
     name: "Simple Weather App",
     description:
       "The Simple Weather App is a web application that provides weather information for a specific location. Users can enter a city name and receive real-time weather data, including temperature, humidity, and weather conditions. Someone looking for quick weather updates can easily use this app for instant results.",
