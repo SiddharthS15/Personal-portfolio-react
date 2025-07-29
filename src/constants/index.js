@@ -246,6 +246,7 @@ const experiences = [
 
 const projects = [
   {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "AI Medical Assistance",
     description:
@@ -279,6 +280,7 @@ const projects = [
     ]
   },
   {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "MediPredict AI",
     description:
@@ -306,6 +308,7 @@ const projects = [
     live_project_link: "https://web-production-7fc33.up.railway.app/",
   },
    {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "Agriclimate-analytics",
     description:
@@ -334,6 +337,7 @@ const projects = [
     live_project_status: "Developer is working on making it live", // Show this in popup on button click
   },
   {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "Todo App",
     description:
@@ -359,6 +363,7 @@ const projects = [
     live_project_link: "https://todo-app-sigma-ochre-87.vercel.app/",
   },
   {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "Fashion Store",
     description:
@@ -386,6 +391,7 @@ const projects = [
     live_project_link: "https://e-com-beta-orpin.vercel.app/index.html",
   },
   {
+    minorUpdate: true,
     lastUpdated: "2025-07-29",
     name: "Simple Weather App",
     description:
